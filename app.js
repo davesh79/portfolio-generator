@@ -1,12 +1,12 @@
 const inquirer = require('inquirer');
-// const fs = require('fs');
+ const fs = require('fs');
 // const generatePage = require('./src/page-template');
 // const fs = require('fs');
 // const generatePage = require('./src/page-template');
 
 // const pageHTML = generatePage(name, github);
 
-// fs.writeFile('./index.html', pageHTML, err => {
+ fs.writeFile('./index.html', pageHTML, err => {
 //   if (err) throw err;
 
 const promptUser = () => {
@@ -49,15 +49,17 @@ const promptUser = () => {
                 return false;
               }
             }
-          },
-          {
+            
+          }
+
             type: 'input',
             name: 'name',
             message: 'What is your name? (Required)',
             validate: nameInput => {
               if (nameInput) {
                 return true;
-              } else {
+              } 
+              else {
                 console.log('Please enter your name!');
                 return false;
               }
@@ -85,7 +87,8 @@ const promptUser = () => {
             type: 'input',
             name: 'github',
             message: 'Enter your GitHub Username'
-            {
+        },
+           {
                 type: 'confirm',
                 name: 'confirmAbout',
                 message: 'Would you like to enter some information about yourself for an "About" section?',
@@ -102,10 +105,10 @@ const promptUser = () => {
                     return false;
                   }
                 }
-              }
+              },
 
 
-        },
+        
         {
             type: 'input',
             name: 'about',
