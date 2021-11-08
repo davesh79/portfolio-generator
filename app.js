@@ -48,9 +48,8 @@ const promptUser = () => {
                 console.log('Please enter your name!');
                 return false;
               }
-            }
             
-          }
+          },
 
             type: 'input',
             name: 'name',
